@@ -1,4 +1,6 @@
--[https://www.youtube.com/watch?v=QF4ZF857m44&list=WL&index=62&t=774s](https://www.youtube.com/watch?v=QF4ZF857m44&list=WL&index=62&t=774s)
+- [https://spring.io/guides/gs/spring-boot/](https://spring.io/guides/gs/spring-boot/)
+
+- [https://www.youtube.com/watch?v=QF4ZF857m44&list=WL&index=62&t=774s](https://www.youtube.com/watch?v=QF4ZF857m44&list=WL&index=62&t=774s)
 
 - [https://hub.docker.com/](https://hub.docker.com/)
 
@@ -36,5 +38,19 @@ docker volume ls
 docker volume create web
 
 docker run --rm --name web -p 8080:8080 -e TZ=Europe/Moscow -v web:/usr/src/myapp
+
+docker images
+
+docker rmi $(docker images -q) # удалить все образы
+
+docker-compose up -d
+
+docker-compose down
+
+docker build -t ezhovda/hw .
+
+docker push ezhovda/hw
+
+docker login
 
 ```

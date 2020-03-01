@@ -1,0 +1,18 @@
+version: 3
+
+volumes:
+  todo:
+
+services:
+  one:
+    build: folder/
+    restart: always
+    enviropment:
+      KEY=value
+      MONGO_DB_ADDR=mongodb
+
+mongodb:
+  image: mongo:latest
+  volumes:
+    - todo:/data/db
+  restart: always
