@@ -54,4 +54,6 @@ docker push ezhovda/hw
 docker login
 
 docker rmi $(docker images -q)
+
+docker image inspect $image
 ```
