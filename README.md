@@ -56,4 +56,6 @@ docker login
 docker rmi $(docker images -q)
 
 docker image inspect $image
+
+docker run -it smoke-prod-tests sh
 ```
