@@ -45,6 +45,8 @@ docker images
 
 docker rmi $(docker images -q) # удалить все образы
 
+docker rmi $(docker images --format "{{.ID}}") # удалить все образы
+
 docker-compose up -d
 
 docker-compose down
