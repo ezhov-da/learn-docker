@@ -25,6 +25,8 @@ docker run --name hello -d hello-world # -d работа в фоне
 
 docker stop <name/ID>
 
+docker stop $(docker ps -qa)
+
 docker run --name hello -d -rm hello-world # -rm удалить контейнер после остановки
 
 docker run --rm --name web -p 8080:8080 web-world # -p проброс портов
