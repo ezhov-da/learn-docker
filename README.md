@@ -64,6 +64,8 @@ docker rmi $(docker images --format "{{.ID}}") # удалить все обра�
 
 [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/)
 
+При выполнении команды ```COPY``` для копирования полностью иерархии необходимо использовать ```COPY files/ /files/``` вместо ```COPY files/* /files/```
+
 ```
 docker build -t hello-world . # точка - это контекст, который передаётся docker демону
 ```
@@ -97,6 +99,12 @@ docker run --rm -v /data -it busybox sh
 docker run -d -v /host/dir:/container/dir -it busybox sh
 docker volume ls # просмотр доступных томов
 docker volume create web
+```
+
+## Копирование из docker образа
+
+```
+docker cp $container:$containerPathToFile $pathToHost
 ```
 
 ## Разное
