@@ -63,6 +63,7 @@ docker rmi $(docker images --format "{{.ID}}") # удалить все обра�
 ## Dockerfile
 
 [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/)
+[https://docs.docker.com/develop/develop-images/dockerfile_best-practices/](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
 При выполнении команды ```COPY``` для копирования полностью иерархии необходимо использовать ```COPY files/ /files/``` вместо ```COPY files/* /files/```
 
